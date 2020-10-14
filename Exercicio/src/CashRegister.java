@@ -15,11 +15,11 @@ public class CashRegister {
 	public double payEconomical(double cashGiven) {
 
 		if (cashGiven < price_of_economical) {
-		return cashGiven; 
+		return (0.0) ; 
 				//this.economicalSold--;
 		}
 		this.cashInRegister += price_of_economical;
-		this.economicalSold++;
+		//this.economicalSold++;
 		this.cashInRegister++;
 		return cashGiven -= price_of_economical;
 	}

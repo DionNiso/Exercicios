@@ -26,6 +26,15 @@ public class Main {
 	succeeded = payAMeal.payEconomical(customer2);
 	System.out.println("payment success: " + succeeded);
 	
+	succeeded = payAMeal.payEconomical(customer2);
+	System.out.println("payment success: " + succeeded);
+	
+	succeeded = payAMeal.payGourmet(customer2);
+	System.out.println("payment success: " + succeeded);
+	
+	succeeded = payAMeal.payGourmet(customer1);
+	System.out.println("payment success: " + succeeded);
+	
 	System.out.println( payAMeal );
 		
 	}
