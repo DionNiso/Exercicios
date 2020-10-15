@@ -1,6 +1,18 @@
 package person;
 
 public class Person {
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 	private String name;
 	private int age;
 	
@@ -9,7 +21,7 @@ public class Person {
 		this.name = initialName;
 	}
 	public void printPerson() {
-		System.out.println(this.name  + ", age" + this.age + " years");
+		System.out.println(this.name  + ", age: " + this.age + " years");
 	}
 	public boolean isAdult() {
 		if (this.age < 18) {

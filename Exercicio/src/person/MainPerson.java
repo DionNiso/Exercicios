@@ -10,9 +10,7 @@ public class MainPerson {
 	
 	rocio.isAdult();
 	
-	//problems with linux version. Shows error when it hasn't.
-	
-	//System.out.println (rocio.getName());
+	System.out.println (rocio.getName());
 	
 	
 }	
