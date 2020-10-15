@@ -18,7 +18,8 @@ public class Person {
 	
 	public Person(String initialName){
 		this.age = 0;
-		this.name = initialName;
+		this.name = name;
+		
 	}
 	public void printPerson() {
 		System.out.println(this.name  + ", age: " + this.age + " years");
@@ -28,6 +29,9 @@ public class Person {
 		return false;
 		}
 		return true;
+	}
+	public String toString() {
+		return this.name + " age " + this.age + " years";
 	}
 }
 
