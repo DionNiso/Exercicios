@@ -10,7 +10,7 @@ public class MainPerson {
 
 	rocio.setAge(30);
 	manolo.setAge(17);
-	
+	//System
 	System.out.println (rocio);
 	System.out.println (manolo);
 	
