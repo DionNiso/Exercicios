@@ -24,6 +24,5 @@ public class MainPerson {
 	else 
 		System.out.println (manolo.getName()+ " is minor");
 	
-}	
-	
+	}	
 }
