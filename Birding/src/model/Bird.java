@@ -5,18 +5,28 @@ public class Bird {
 	private String name;
 	private String nameLatin;
 	private int observations;
+	private String discover;
 	
 	//constructor
-	public Bird(String name,  String nameLatin, int observations ) {
+	public Bird(String name,  String nameLatin, int observations, String discover ) {
 		this.name = name;
 		this.nameLatin = nameLatin;
 		this.observations = observations;
+		this.discover = discover;
 	}
 	
 	//methods
 	// birds ...
 	
 	////getters and setters
+
+	public String getDiscover() {
+		return discover;
+	}
+
+	public void setDiscover(String discover) {
+		this.discover = discover;
+	}
 
 	public String getName() {
 		return name;
@@ -52,6 +62,6 @@ public class Bird {
 
 	@Override
 	public String toString() {
-		return "Bird [name=" + name + ", nameLatin=" + nameLatin + ", observations=" + observations + "]";
+		return "Bird [name=" + name + ", nameLatin=" + nameLatin + ", observations=" + observations + ", discover=" + discover +"]";
 	}
 }

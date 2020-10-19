@@ -67,7 +67,7 @@ public class BirdsDB {
 	public String toString() {
 		String chain = "\rBirds list: \n";
 		for (Bird bird : this.birds) {
-			chain += "\t" + bird.getName() + ", " + bird.getObservations() + " obs.\n";	
+			chain += "\t" + bird.getName() + ", " + bird.getObservations() + " obs, " + bird.getDiscover() + ".\n";	
 			//System.out.println("Chain status: "+ chain);
 		}
 		return chain;

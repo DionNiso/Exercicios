@@ -38,6 +38,11 @@ public class UtilsIO {
 		return reader.nextLine();
 	}
 	
+	public static String askForDiscover(Scanner reader){
+		System.out.println("Discover: ");
+		return reader.nextLine();
+	}
+	
 	public static void noBirdMessage (String name) { 
 		//Print the complete DB
 		System.out.println(name + " does not exist in our DB!");

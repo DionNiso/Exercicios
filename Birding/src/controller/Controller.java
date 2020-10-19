@@ -16,9 +16,10 @@ public class Controller {
 		
 		String name = UtilsIO.askForName(reader);
 		String nameLatin = UtilsIO.askForNameLatin(reader);
+		String discover = UtilsIO.askForDiscover(reader);
 		
 		//Create object Bird
-		Bird bird = new Bird(name, nameLatin, 0 );
+		Bird bird = new Bird(name, nameLatin, 0, discover);
 		
 		
 		//Ask if bird is in BirdsDB
