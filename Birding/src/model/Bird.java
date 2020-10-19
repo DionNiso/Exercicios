@@ -1,18 +1,22 @@
 package model;
 
+import java.util.ArrayList;
+
+import person.Person;
+
 public class Bird {
 	//attributes
 	private String name;
 	private String nameLatin;
 	private int observations;
-	private String discover;
+	public ArrayList<Person> discover;
 	
 	//constructor
 	public Bird(String name,  String nameLatin, int observations, String discover ) {
 		this.name = name;
 		this.nameLatin = nameLatin;
 		this.observations = observations;
-		this.discover = discover;
+		this.discover =  new ArrayList<Person>();
 	}
 	
 	//methods
@@ -20,11 +24,11 @@ public class Bird {
 	
 	////getters and setters
 
-	public String getDiscover() {
+	public ArrayList<Person> getDiscover() {
 		return discover;
 	}
 
-	public void setDiscover(String discover) {
+	public void setDiscover(ArrayList<Person> discover) {
 		this.discover = discover;
 	}
 
