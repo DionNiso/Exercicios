@@ -3,6 +3,7 @@ package view;
 import java.util.Scanner;
 
 import controller.Controller;
+import person.Person;
 import service.BirdsDB;
 import utils.UtilsIO;
 
@@ -19,7 +20,7 @@ public class Menu {
 		this.db = db;
 	}
 		
-	public  void loop(Scanner reader) {	
+	public  void loop(Scanner reader, ArrayList<Person> discover) {	
 		MenuOptions options = new MenuOptions();
 		
 	    while (true) {
@@ -36,7 +37,7 @@ public class Menu {
 	        if (command.equals("Quit")) {
 	            break;
 	        } else if (command.equals("Add")) {
-	        	Controller.add(this.reader,db);
+	        	Controller.add(this.reader,db, discover);
 	        } else if (command.equals("Observation")) {
 	        	Controller.observation(this.reader,db);
 	        } else if (command.equals("Show")) {

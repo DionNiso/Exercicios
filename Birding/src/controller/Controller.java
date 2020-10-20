@@ -1,25 +1,30 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Bird;
+import person.Person;
 import service.BirdsDB;
 import utils.UtilsIO;
 
 public class Controller {
 	
 	//static FrontController methods
-	public static void add(Scanner reader, BirdsDB db) {  
+	public static void add(Scanner reader, BirdsDB db, ArrayList<Person> person) {  
 		//Ask for input data
-		
-		
-		
+	
 		String name = UtilsIO.askForName(reader);
 		String nameLatin = UtilsIO.askForNameLatin(reader);
-		String discover = UtilsIO.askForDiscover(reader);
+		String discoverer = UtilsIO.askForDiscover(reader);
+				
+		//Create object Person
+		Person person1 = new Person(discoverer);
+				
 		
 		//Create object Bird
-		Bird bird = new Bird(name, nameLatin, 0, discover);
+		Bird bird = new Bird(name, nameLatin, 0, person1);
+		
 		
 		
 		//Ask if bird is in BirdsDB
@@ -104,7 +109,4 @@ public class Controller {
 		//If not add bird to BirdsDB
 		return -1;
 	}
-
-
-
 }

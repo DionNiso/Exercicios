@@ -3,6 +3,7 @@ package service;
 
 import java.util.ArrayList;
 import model.Bird;
+import person.Person;
 
 //A DB made from a list
 //Contains all bird objects created in the program	
@@ -12,13 +13,25 @@ public class BirdsDB {
 	//create ArrayObject of Bird objects
 	private ArrayList<Bird> birds;
 	private String dbName;
+	private ArrayList<Person> person;
 
 	public BirdsDB( String name) {
 		this.birds =  new ArrayList<Bird>();
+		this.person =  new ArrayList<Person>();
 		this.setDbName(name);
 	}
 	
 	
+	public ArrayList<Person> getPerson() {
+		return person;
+	}
+
+
+	public void setPerson(ArrayList<Person> person) {
+		this.person = person;
+	}
+
+
 	//methods
 	public ArrayList<Bird> getArray(){
 		
@@ -65,9 +78,10 @@ public class BirdsDB {
 	//toString
 	@Override
 	public String toString() {
+		System.out.println (birds);
 		String chain = "\rBirds list: \n";
 		for (Bird bird : this.birds) {
-			chain += "\t" + bird.getName() + ", " + bird.getObservations() + " obs, " + bird.getDiscover() + ".\n";	
+			chain += "\t" + bird.getName() + ", " + bird.getObservations() + " obs, " + bird.getDiscoverer() + ".\n";	
 			//System.out.println("Chain status: "+ chain);
 		}
 		return chain;

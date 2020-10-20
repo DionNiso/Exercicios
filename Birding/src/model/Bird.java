@@ -9,14 +9,14 @@ public class Bird {
 	private String name;
 	private String nameLatin;
 	private int observations;
-	public ArrayList<Person> discover;
+	public Person discoverer;
 	
 	//constructor
-	public Bird(String name,  String nameLatin, int observations, String discover ) {
+	public Bird(String name,  String nameLatin, int observations, Person discoverer ) {
 		this.name = name;
 		this.nameLatin = nameLatin;
 		this.observations = observations;
-		this.discover =  new ArrayList<Person>();
+		this.discoverer =  discoverer;
 	}
 	
 	//methods
@@ -24,16 +24,23 @@ public class Bird {
 	
 	////getters and setters
 
-	public ArrayList<Person> getDiscover() {
-		return discover;
-	}
 
-	public void setDiscover(ArrayList<Person> discover) {
-		this.discover = discover;
+	public Bird(String name2, String nameLatin2, int observations2, ArrayList<Person> discoverer) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getName() {
 		return name;
+	}
+
+	
+
+	public Person getDiscoverer() {
+		return discoverer;
+	}
+
+	public void setDiscoverer(Person discoverer) {
+		this.discoverer = discoverer;
 	}
 
 	public void setName(String name) {
@@ -66,6 +73,6 @@ public class Bird {
 
 	@Override
 	public String toString() {
-		return "Bird [name=" + name + ", nameLatin=" + nameLatin + ", observations=" + observations + ", discover=" + discover +"]";
+		return "Bird [name=" + name + ", nameLatin=" + nameLatin + ", observations=" + observations + ", discoverer=" + discoverer +"]";
 	}
 }

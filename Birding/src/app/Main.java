@@ -20,7 +20,7 @@ public class Main {
 		Scanner reader = new Scanner(System.in);
 		
 		Menu menu = new Menu(reader, db );
-		menu.loop(reader);
+		menu.loop(reader, null);
 		
 		System.out.println("See you in the sky!");
 	}	
