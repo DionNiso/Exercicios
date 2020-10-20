@@ -7,6 +7,8 @@ import model.Bird;
 import person.Person;
 import service.BirdsDB;
 import utils.UtilsIO;
+import view.Menu;
+import view.MenuOptions;
 
 public class Controller {
 	
@@ -25,9 +27,11 @@ public class Controller {
 		//Create object Bird
 		Bird bird = new Bird(name, nameLatin, 0, person1);
 		
-		
+		//System.out.println("lo que acabo de crear" + bird);
+		//System.out.println("lo que hay en la db" + db);
 		
 		//Ask if bird is in BirdsDB
+		
 		if (isBirdInDb(bird, db)) {
 			db.addBird(bird);
 		}
@@ -61,6 +65,7 @@ public class Controller {
 		////check if bird exists
 		int location = isBirdInDb(name, db);
 		
+	
 		//Print the data
 		if (location != -1) {
 		//////true print the bird data
@@ -77,6 +82,12 @@ public class Controller {
 		System.out.println(db.toString());
 		
 	}
+	public static void menu(MenuOptions options) { 
+		//Print the complete DB
+		System.out.println("These are the available options");
+		//System.out.println(options.toString());
+		
+	}
 	
 	//static Controller methods
 	public static boolean isBirdInDb(Bird bird, BirdsDB db) {	
@@ -89,6 +100,7 @@ public class Controller {
 			//System.out.println("bird object name: "+bird.getName());
 			//System.out.println("dbBird object name: "+dbBird.getName());
 			if( bird.getName().equals(dbBird.getName())) {
+				
 				return false;
 				}			
 		}

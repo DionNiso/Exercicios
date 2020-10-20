@@ -13,11 +13,13 @@ import java.util.Collections;
 public class Menu {		
 	private Scanner reader;
 	private BirdsDB db;
+	private Menu menu;
 	
 	
 	public Menu(Scanner reader, BirdsDB db) {
 		this.reader = reader;
 		this.db = db;
+		this.menu = menu;
 	}
 		
 	public  void loop(Scanner reader, ArrayList<Person> discover) {	
@@ -44,7 +46,9 @@ public class Menu {
 	        	Controller.show(this.reader,db);
 	        } else if (command.equals("Statistics")) {
 	        	Controller.statistics(db);
-	        } 
+	        } else if (command.equals("Menu")) {
+	        	Controller.menu(options);
+	        }
 	    }
 	}
 

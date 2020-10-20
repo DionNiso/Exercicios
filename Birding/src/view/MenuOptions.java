@@ -10,7 +10,7 @@ public class MenuOptions {
 
 	public MenuOptions() {
 		options = new ArrayList<String>();
-		Collections.addAll(options, "Quit", "Add", "Observation", "Show", "Statistics");
+		Collections.addAll(options, "Quit", "Add", "Observation", "Show", "Statistics", "Menu");
 
 	}
 
@@ -27,7 +27,7 @@ public class MenuOptions {
 		System.out.println("\t" + options.get(2));
 		System.out.println("\t" + options.get(3));
 		System.out.println("\t" + options.get(4));
-		
+		System.out.println("\t" + options.get(5));
 		
 	}
 }
