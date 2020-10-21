@@ -6,6 +6,7 @@ public class Ej48 {
 		public static void main(String[] args) {
 			Scanner reader = new Scanner(System.in); 
 			System.out.println("Program to print the lenght of the word you write");
+			//test to check the git merge from a new eclpse
 			System.out.println("Please write a name :");  
 			String name = reader.nextLine();
 					
