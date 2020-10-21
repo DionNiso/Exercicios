@@ -1,3 +1,4 @@
+package cashRegister;
 public class CashRegister {
 	private double cashInRegister;
 	private int economicalSold;

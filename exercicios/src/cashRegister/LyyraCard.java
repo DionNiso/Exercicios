@@ -1,3 +1,4 @@
+package cashRegister;
 public class LyyraCard {
 	private double balance;
 	private double amount;
