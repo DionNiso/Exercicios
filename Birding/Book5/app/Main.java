@@ -2,19 +2,19 @@ package app;
 
 import java.util.Scanner;
 
-import service.BirdsDB;
-import utils.InitialBirdsFilling;
+import service.BooksDB;
+import utils.InitialBooksFilling;
 import view.Menu;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// Watching up birds!
+		// Watching up books!
 		
-		//Create a Birds Data Base
-		BirdsDB db = new BirdsDB( "birding" );
-		//BirdsDB dbRoger = new BirdsDB( "Rogerbirding" );
-		db.setBirds(InitialBirdsFilling.birds);
+		
+		BooksDB db = new BooksDB( "birding" );
+		
+		db.setBooks(InitialBooksFilling.books);
 		
 		//Ask user from menu by scanner
 		Scanner reader = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class Main {
 		Menu menu = new Menu(reader, db );
 		menu.loop(reader, null);
 		
-		System.out.println("See you in the sky!");
+		System.out.println("See you!");
 	}	
 
 }

@@ -2,27 +2,27 @@ package view;
 
 import java.util.Scanner;
 
+import author.Author;
 import controller.Controller;
-import person.Person;
-import service.BirdsDB;
+import service.BooksDB;
 import utils.UtilsIO;
 
 import java.util.ArrayList;
-import java.util.Collections;
+//import java.util.Collections;
 
 public class Menu {		
 	private Scanner reader;
-	private BirdsDB db;
-	private Menu menu;
+	private BooksDB db;
+//	private Menu menu;
 	
 	
-	public Menu(Scanner reader, BirdsDB db) {
+	public Menu(Scanner reader, BooksDB db) {
 		this.reader = reader;
 		this.db = db;
-		this.menu = menu;
+		//this.menu = menu;
 	}
 		
-	public  void loop(Scanner reader, ArrayList<Person> discover) {	
+	public  void loop(Scanner reader, ArrayList<Author> discover) {	
 		MenuOptions options = new MenuOptions();
 		
 	    while (true) {
@@ -40,9 +40,9 @@ public class Menu {
 	            break;
 	        } else if (command.equals("Add")) {
 	        	Controller.add(this.reader,db, discover);
-	        } else if (command.equals("Observation")) {
+	        } /*else if (command.equals("Observation")) {
 	        	Controller.observation(this.reader,db);
-	        } else if (command.equals("Show")) {
+	        }*/ else if (command.equals("Show")) {
 	        	Controller.show(this.reader,db);
 	        } else if (command.equals("Statistics")) {
 	        	Controller.statistics(db);
