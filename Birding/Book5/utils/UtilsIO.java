@@ -48,6 +48,11 @@ public class UtilsIO {
 		System.out.println("Publisher: ");
 		return reader.nextLine();
 	}
+	public static String askForAuthorToAsign(Scanner reader){
+		System.out.println("AuthorToAsign: ");
+		return reader.nextLine();
+	}
+	
 	
 	public static int askForCost(Scanner reader){
 		System.out.println("Cost: ");

@@ -22,7 +22,7 @@ public class Menu {
 		//this.menu = menu;
 	}
 		
-	public  void loop(Scanner reader, ArrayList<Author> discover) {	
+	public  void loop(Scanner reader, ArrayList<Author> author) {	
 		MenuOptions options = new MenuOptions();
 		
 	    while (true) {
@@ -39,7 +39,7 @@ public class Menu {
 	        if (command.equals("Quit")) {
 	            break;
 	        } else if (command.equals("Add")) {
-	        	Controller.add(this.reader,db, discover);
+	        	Controller.add(this.reader,db, author);
 	        } /*else if (command.equals("Observation")) {
 	        	Controller.observation(this.reader,db);
 	        }*/ else if (command.equals("Show")) {

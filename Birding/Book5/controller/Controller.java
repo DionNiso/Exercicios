@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import author.Author;
 import model.Book;
+import service.AuthorsDB;
 import service.BooksDB;
 import utils.UtilsIO;
 //import view.Menu;
@@ -20,6 +21,26 @@ public class Controller {
 		int year = UtilsIO.askForYear(reader);
 		String publisher = UtilsIO.askForPublisher(reader);
 		int cost = UtilsIO.askForCost(reader); 
+		String authorToAsign = UtilsIO.askForAuthorToAsign(reader);
+
+		
+		//Create object Book
+		Book book = new Book(title, author, year, publisher, cost);
+		
+		//System.out.println("lo que acabo de crear" + book);
+		//System.out.println("lo que hay en la db" + db);author
+		
+		//Ask if book is in BooksDBhashcode
+		
+		if (isBookInDb(book, db)) {
+			db.addBook(book);
+		}
+	}
+	
+	public static void asign(Scanner reader, AuthorsDB db) {  
+		System.out.println("choose one option" + db);	
+		//Ask for input data
+		
 		
 		String authorName = UtilsIO.askForAuthorName(reader);
 		String email = UtilsIO.askForEmail(reader);
@@ -29,15 +50,12 @@ public class Controller {
 		Author personAuthor = new Author(authorName, email, gender);
 				
 		//Create object Book
-		Book book = new Book(title, personAuthor.getName(), year, publisher, cost);
-		
-		//System.out.println("lo que acabo de crear" + book);
-		//System.out.println("lo que hay en la db" + db);
+		//Book book1 = new Book(title, personAuthor.getName(), year, publisher, cost);
 		
 		//Ask if book is in BooksDB
 		
-		if (isBookInDb(book, db)) {
-			db.addBook(book);
+		if (isAuthorInDb(personAuthor, db)) {
+			db.addAuthor(personAuthor);
 		}
 	}
 			
@@ -117,6 +135,39 @@ public class Controller {
 		int i = 0;
 		for( Book dbBook : db.getArray()) {
 			if(name.equals(dbBook.getTitle())) {
+				return i;
+			}
+			i ++;
+		}		
+		//If not add book to BooksDB
+		return -1;
+	}	
+	
+	
+	public static boolean isAuthorInDb(Author author, AuthorsDB db) {	
+		//Check for empty array
+		if (db.arraySize() == 0 ){
+			return true;
+		}
+		//Ask if bird is in BooksDB
+		for( Author dbAuthor: db.getArray()) {
+			//System.out.println("book object name: "+book.getName());
+			//System.out.println("dbBook object name: "+dbBook.getName());
+			if( author.getName().equals(dbAuthor.getName())) {
+				
+				return false;
+				}			
+		}
+
+		//If not add author to AuthorsDB
+		return true;
+	}
+	
+	public static int isAuthorInDb(String name, AuthorsDB db) {		
+		//Ask if book is in AuthorDB
+		int i = 0;
+		for( Author dbAuthor : db.getArray()) {
+			if(name.equals(dbAuthor.getName())) {
 				return i;
 			}
 			i ++;

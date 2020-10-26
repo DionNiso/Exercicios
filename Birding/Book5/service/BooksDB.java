@@ -22,23 +22,12 @@ public class BooksDB {
 		this.setDbName(name);
 	}
 	
-	
-	public ArrayList<Author> getPerson() {
-		return author;
-	}
-
-
-	public void setPerson(ArrayList<Author> author) {
-		this.author = author;
-	}
-
-
 	//methods
 	public ArrayList<Book> getArray(){
 		
 		return this.books;
 	}
-	
+
 	public Book getBook(int location) {
 		
 		return this.books.get(location);
@@ -59,7 +48,7 @@ public class BooksDB {
 	/*
 	public void deleteBook(Book book) {
 		
-		//this.birds.remove(this.birds.indexOf(bird));
+		//this.books.remove(this.books.indexOf(book));
 		this.books.remove(book);
 	}*/
 	
